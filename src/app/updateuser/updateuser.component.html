@@ -1,0 +1,46 @@
+<app-header> </app-header>
+
+<div class="userupdate-container">
+    <h2>Update User</h2>
+    <!-- <form (submit)="submitForm()"> -->
+    <form #userupdateform="ngForm" (ngSubmit)="userUpdate(userupdateform.value)">
+        <div class="form-group">
+            <label for="Bookname">UserName</label>
+            <input type="text" id="Bookname" name="Bookname"  ngModel>
+
+        </div>
+
+        <div class="form-group">
+            <label for="FirstName">First Name</label>
+            <input type="text" id="FirstName" name="FirstName" ngModel>
+
+        </div>
+
+        <div class="form-group">
+            <label for="LastName">Last Name</label>
+            <input type="text" id="LastName" name="LastName" ngModel>
+
+        </div>
+
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" id="Email" name="Email" ngModel>
+
+        </div>
+
+        <div class="form-group">
+            <label for="PhoneNumber">PhoneNumber</label>
+            <input type="tel" id="Phone" name="Phone" ngModel>
+
+        </div>
+
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="text" id="Password" name="Password" ngModel>
+        </div>
+
+        <button type="submit">Submit</button>
+        <a href="/users">User View</a>
+
+    </form>
+</div>

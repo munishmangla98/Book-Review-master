@@ -1,0 +1,51 @@
+<app-header> </app-header>
+
+<div class="bookupdate-container">
+    <h2>Update Book</h2>
+    <!-- <form (submit)="submitForm()"> -->
+    <form #Bookupdateform="ngForm" (ngSubmit)="Bookupdate(Bookupdateform.value)">
+        <div class="form-group">
+            <label for="Bookname">Book Name:</label>
+            <input type="text" id="Bookname" name="Bookname" ngModel>
+
+        </div>
+
+        <div class="form-group">
+            <label for="BookAuthor">Author Name:</label>
+            <input type="text" id="BookAuthor" name="BookAuthor" ngModel>
+
+        </div>
+
+        <div class="form-group">
+            <label for="Dateofpublishing">Dateofpublishing:</label>
+            <input type="date" id="Dateofpublishing" name="Dateofpublishing" ngModel>
+
+        </div>
+
+        <div class="form-group">
+            <label for="Rating">Rating</label>
+            <input type="number" id="number" name="number">
+
+        </div>
+        <!-- <div class="form-group">
+            <label for="Rating">Rating</label>
+            <input type="number" id="number" name="number" [(ngModel)]="userData.rating" (input)="validateRating()">
+            <div *ngIf="ratingError" class="error-message">Invalid rating. Please enter a number between 1 and 5.</div>
+        </div> -->
+
+        <div class="form-group">
+            <label for="Review">Review:</label>
+            <input type="text" id="Review" name="Review" ngModel>
+
+        </div>
+
+        <div class="form-group">
+            <label for="pic">Picture:</label>
+            <input type="file" id="pic" name="pic" accept="image/*" ngModel>
+        </div>
+
+        <button type="submit">Submit</button>
+        <a href="/retrive-book">Book View</a>
+
+    </form>
+</div>

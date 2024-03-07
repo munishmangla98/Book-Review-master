@@ -1,0 +1,66 @@
+{
+  "user_signup": [
+    {
+      "id": "275a",
+      "firstname": "anil",
+      "lastname": "mittal",
+      "email": "anil@gmail.com",
+      "phone_No.": "9876543210",
+      "username": "anil_123",
+      "password": "123"
+    },
+    {
+      "id": "cae1",
+      "firstname": "amit",
+      "lastname": "mittal",
+      "email": "amit@gmail.com",
+      "phone_No.": "9876543211",
+      "username": "amit_123",
+      "password": "1231"
+    },
+    {
+      "id": "0e27",
+      "firstname": "amit",
+      "lastname": "mittal",
+      "email": "amit@gmail.com",
+      "phone_No": "9876543211",
+      "username": "amit_123",
+      "password": "1231"
+    },
+    {
+      "id": "9638",
+      "firstname": "amit",
+      "lastname": "mittal",
+      "email": "amit@gmail.com",
+      "phone_No": "9876543211",
+      "username": "amit_123",
+      "password": "1231"
+    },
+    {
+      "id": "18f1",
+      "firstName": "hello",
+      "lastName": "ji",
+      "email": "hello@gmail.com",
+      "phoneNumber": 9876543210,
+      "username": "hello_123",
+      "password": "1234"
+    }
+  ],
+  "user_login": [
+    {
+      "userId": "9638",
+      "username": "amit_123",
+      "password": "1231"
+    },
+    {
+      "id": "2fed",
+      "username": "amit_123",
+      "password": "1231"
+    },
+    {
+      "id": "1739",
+      "username": "amit_123",
+      "password": "1231"
+    }
+  ]
+}

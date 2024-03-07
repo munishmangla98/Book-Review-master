@@ -1,0 +1,28 @@
+<app-header> </app-header>
+<!-- login.component.html -->
+
+<div class="login-container">
+    <h2>Login</h2>
+    <!-- <form (submit)="submitForm()"> -->
+    <form #loginform="ngForm" (ngSubmit)="login(loginform.value)">
+
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <!-- <input type="text" id="username" name="username" [(ngModel)]="userData.username"  > -->
+            <input type="text" id="username" name="username" ngModel >
+
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <!-- <input type="password" id="password" name="password" [(ngModel)]="userData.password"  > -->
+            <input type="password" id="password" name="password" ngModel >
+
+        </div>
+        
+        <button type="submit">Submit</button>
+        <a routerLink="/admin">Admin</a>
+        <a href="/signup"> singup</a>
+        
+    </form>
+</div>

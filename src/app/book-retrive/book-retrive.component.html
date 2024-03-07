@@ -1,0 +1,42 @@
+<app-header> </app-header>
+<!-- Add this section to display the table with Activate/Deactivate buttons -->
+<div class="book-list-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Publishing Date</th>
+        <th>Rating</th>
+        <th>Review</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Use *ngFor to iterate over your book data and populate the table rows -->
+      <!-- <tr *ngFor="let book of books"> -->
+        <!-- <td>{{ book.name }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.publishDate }}</td>
+        <td>{{ book.rating }}</td>
+        <td>{{ book.review }}</td> -->
+        <tr>
+
+        <td>book</td>
+        <td>book</td>
+        <td>book</td>
+        <td>book</td>
+        <td>book</td>
+        <td>
+            <button>Activate</button>
+            <button>Deactivate</button>
+          <!-- Use ngIf to conditionally display Activate/Deactivate buttons based on the book's activation state -->
+          <!-- <button *ngIf="!book.active" (click)="activateBook(book)">Activate</button>
+          <button *ngIf="book.active" (click)="deactivateBook(book)">Deactivate</button> -->
+          <a routerLink="/bookupdate">update-book</a>   
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
