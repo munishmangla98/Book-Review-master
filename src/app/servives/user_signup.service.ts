@@ -13,6 +13,20 @@ export class UserSignupService {
   userlogin(data: user_login) {
     return this.http.get(`http://localhost:3000/user_login?username=${data.username}&password=${data.password}`)
   }
-}
 
+
+  userlist(data: user_signup) {
+    return this.http.get<user_signup[]>("http://localhost:3000/user_signup")
+  }
+  deleteUser(id: string) {
+    return this.http.delete(`http://localhost:3000/user_signup/${id}`)
+  }
+  getuser(id:string){
+    return this.http.get<user_signup>(`http://localhost:3000/user_signup/${id}`)
+  }
+  updated_user(data:user_signup){
+    return this.http.put<user_signup>(`http://localhost:3000/user_signup/${data.id}`,data);
+  }
+
+}
 

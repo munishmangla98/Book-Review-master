@@ -1,42 +1,43 @@
 <app-header> </app-header>
-
 <div class="userupdate-container">
     <h2>Update User</h2>
+    <p style="color: green; text-align: center; font-size: 20px;font-weight: bold;">{{userUpdatedMessage}}</p>
+
     <!-- <form (submit)="submitForm()"> -->
     <form #userupdateform="ngForm" (ngSubmit)="userUpdate(userupdateform.value)">
         <div class="form-group">
-            <label for="Bookname">UserName</label>
-            <input type="text" id="Bookname" name="Bookname"  ngModel>
+            <label for="username">UserName</label>
+            <input type="text" id="username" name="username"  ngModel="{{userdata?.username}}">
 
         </div>
 
         <div class="form-group">
-            <label for="FirstName">First Name</label>
-            <input type="text" id="FirstName" name="FirstName" ngModel>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" ngModel="{{userdata?.firstName}}">
 
         </div>
 
         <div class="form-group">
-            <label for="LastName">Last Name</label>
-            <input type="text" id="LastName" name="LastName" ngModel>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" ngModel="{{userdata?.lastName}}">
 
         </div>
 
         <div class="form-group">
-            <label for="Email">Email</label>
-            <input type="email" id="Email" name="Email" ngModel>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" ngModel="{{userdata?.email}}">
 
         </div>
 
         <div class="form-group">
-            <label for="PhoneNumber">PhoneNumber</label>
-            <input type="tel" id="Phone" name="Phone" ngModel>
+            <label for="phoneNumber">PhoneNumber</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" ngModel="{{userdata?.phoneNumber}}">
 
         </div>
 
         <div class="form-group">
-            <label for="Password">Password</label>
-            <input type="text" id="Password" name="Password" ngModel>
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" ngModel="{{userdata?.password}}">
         </div>
 
         <button type="submit">Submit</button>

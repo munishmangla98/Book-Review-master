@@ -145,3 +145,20 @@ app-header {
     text-decoration: none;
     list-style: none; 
   }
+  
+  .book-reviews-container h1 {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* Optional: Add a background color for better visibility */
+    z-index: 100; /* Optional: Set a higher z-index to ensure it appears above other elements */
+}
+.book-list h3,
+.book-status h3 {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* Optional: Add a background color for better visibility */
+    z-index: 100; /* Optional: Set a higher z-index to ensure it appears above other elements */
+    margin: 0;
+    padding: 0%;
+}

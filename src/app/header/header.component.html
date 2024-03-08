@@ -1,16 +1,20 @@
 <nav class="nav">
-    <p routerLink="/">Book Reviewer</p>
+    <p routerLink="/">Read Freak</p>
+
     <div class="nav-search">
         <input type="text" placeholder="Search for Book" />
-        <button>Search</button>
+        <button class="button">Search
+        </button>
     </div>
+
+    
     <div class="menu-toggle" (click)="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
     <ul>
-        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/user_name">Home</a></li>
         <li><a routerLink="/about">About</a></li>
         <li><a routerLink="/books">Book</a></li>
         <li><a routerLink="/contactus">Contact Us</a></li>
@@ -19,4 +23,4 @@
 </nav>
 
 
-<app-guest></app-guest>
+<!-- <app-guest></app-guest> -->

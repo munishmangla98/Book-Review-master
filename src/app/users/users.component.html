@@ -3,31 +3,32 @@
 <div class="user-list-table">
   <table>
     <thead>
+      <p style="text-align: center; color: red; align-items: center;">{{usermessage}}</p>
       <tr>
-        <th>User Name</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
         <th>Phone Number</th>
-        <th>location</th>
+        <th>User Name</th>
         <th>Password</th>
         <th>Action</th>
+        <!-- <th>location</th> -->
       </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let item of userlist">
 
-        <td>UserName</td>
-        <td>Fname</td>
-        <td>Lname</td>
-        <td>email</td>
-        <td>PhoneNumber</td>
-        <td>location</td>
-        <td>Password</td>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastName}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.phoneNumber}}</td>
+        <td>{{item.username}}</td>
+        <td>{{item.password}}</td>
+        <!-- <td>{{item.email}}</td> -->
         <td>
-            <button>Activate</button>
-            <button>Deactivate</button>
-          <a routerLink="/updateuser">update-user</a>   
+             <button (click)="deleteuser(item.id)">Delete</button>
+            <!-- <button>Deactivate</button> -->
+          <a routerLink="/updateuser/{{item.id}}">update-user</a>   
 
         </td>
       </tr>

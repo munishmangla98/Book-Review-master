@@ -22,6 +22,8 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { HomeComponent } from './home/home.component';
 import { UserBookPageComponent } from './user-book-page/user-book-page.component';
 import { GuestComponent } from './guest/guest.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,13 +44,15 @@ import { GuestComponent } from './guest/guest.component';
     UserDashboardComponent,
     HomeComponent,
     UserBookPageComponent,
-    GuestComponent
+    GuestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    NgbModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

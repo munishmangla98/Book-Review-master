@@ -1,73 +1,239 @@
-<app-header> </app-header>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Layout</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<app-header></app-header>
 
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            max-height: calc(5 * (18% + 20px));
-            overflow: hidden;
-        }
-
-        .card {
-            width: 18%;
-            margin: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 15px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-    </style>
-</head>
 <body>
 
-<div class="card-container">
+<div class="card-container" id="page1">
+    <!-- <div class="card-container"> -->
+        <!-- Card 1 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 5 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 5 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+      <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 5 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Repeat this structure for additional rows of cards -->
+    </div>
+<!-- </div> -->
+
+<div class="card-container" id="page2" style="display: none;">
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Card 5 -->
+        <div class="card">
+            <h2>Book Name</h2>
+            <p>Book Author</p>
+            <p>Rating</p>
+            <button onclick="openDetails('book_details')">More Details</button>
+        </div>
+    
+        <!-- Repeat this structure for additional rows of cards -->
+    </div>
+</div>
+
+<div class="card-container" id="page3" style="display: none;">
+    <div class="card-container">
     <!-- Card 1 -->
     <div class="card">
-        <h2>Card 1</h2>
-        <p>Card content goes here.</p>
+        <h2>Book Name</h2>
+        <p>Book Author</p>
+        <p>Rating</p>
+        <button onclick="openDetails('book_details')">More Details</button>
     </div>
 
     <!-- Card 2 -->
     <div class="card">
-        <h2>Card 2</h2>
-        <p>Card content goes here.</p>
+        <h2>Book Name</h2>
+        <p>Book Author</p>
+        <p>Rating</p>
+        <button onclick="openDetails('book_details')">More Details</button>
     </div>
 
     <!-- Card 3 -->
     <div class="card">
-        <h2>Card 3</h2>
-        <p>Card content goes here.</p>
+        <h2>Book Name</h2>
+        <p>Book Author</p>
+        <p>Rating</p>
+        <button onclick="openDetails('book_details')">More Details</button>
     </div>
 
     <!-- Card 4 -->
     <div class="card">
-        <h2>Card 4</h2>
-        <p>Card content goes here.</p>
+        <h2>Book Name</h2>
+        <p>Book Author</p>
+        <p>Rating</p>
+        <button onclick="openDetails('book_details')">More Details</button>
     </div>
 
     <!-- Card 5 -->
     <div class="card">
-        <h2>Card 5</h2>
-        <p>Card content goes here.</p>
+        <h2>Book Name</h2>
+        <p>Book Author</p>
+        <p>Rating</p>
+        <button onclick="openDetails('book_details')">More Details</button>
     </div>
 
     <!-- Repeat this structure for additional rows of cards -->
 </div>
+</div>
+
+<!-- Pagination controls -->
+<div class="pagination">
+    <button onclick="showPage(1)">1</button>
+    <button onclick="showPage(2)">2</button>
+    <button onclick="showPage(3)">3</button>
+    <!-- Add more buttons for additional pages as needed -->
+</div>
+
+<script>
+    function showPage(pageNumber) {
+        // Hide all card containers
+        for (let i = 1; i <= 3; i++) {
+            document.getElementById('page' + i).style.display = 'none';
+        }
+
+        // Show the selected card container
+        document.getElementById('page' + pageNumber).style.display = 'block';
+    }
+</script>
 
 </body>
-</html>

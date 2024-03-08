@@ -1,56 +1,30 @@
 {
   "user_signup": [
     {
-      "id": "275a",
-      "firstname": "anil",
-      "lastname": "mittal",
-      "email": "anil@gmail.com",
-      "phone_No.": "9876543210",
-      "username": "anil_123",
-      "password": "123"
+      "username": "mani332",
+      "firstName": "Munish",
+      "lastName": "Mangla",
+      "email": "munishmangla98@gmail.com",
+      "phoneNumber": "9877674603",
+      "password": "1234",
+      "id": "367e"
     },
     {
-      "id": "cae1",
-      "firstname": "amit",
-      "lastname": "mittal",
-      "email": "amit@gmail.com",
-      "phone_No.": "9876543211",
-      "username": "amit_123",
-      "password": "1231"
-    },
-    {
-      "id": "0e27",
-      "firstname": "amit",
-      "lastname": "mittal",
-      "email": "amit@gmail.com",
-      "phone_No": "9876543211",
-      "username": "amit_123",
-      "password": "1231"
-    },
-    {
-      "id": "9638",
-      "firstname": "amit",
-      "lastname": "mittal",
-      "email": "amit@gmail.com",
-      "phone_No": "9876543211",
-      "username": "amit_123",
-      "password": "1231"
-    },
-    {
-      "id": "18f1",
-      "firstName": "hello",
-      "lastName": "ji",
-      "email": "hello@gmail.com",
-      "phoneNumber": 9876543210,
-      "username": "hello_123",
-      "password": "1234"
+      "username": "hello_12311",
+      "firstName": "Munish3",
+      "lastName": "Mangla",
+      "email": "munishmangla98@gmail.com",
+      "phoneNumber": "9877674603",
+      "password": "12234",
+      "id": "30a2"
     }
   ],
   "user_login": [
     {
       "userId": "9638",
       "username": "amit_123",
-      "password": "1231"
+      "password": "1231",
+      "id": "aaf0"
     },
     {
       "id": "2fed",
@@ -61,6 +35,26 @@
       "id": "1739",
       "username": "amit_123",
       "password": "1231"
+    }
+  ],
+  "books": [
+    {
+      "bookname": "angular",
+      "Authorname": "Mani",
+      "Dateofpublishing": "12-34-2024",
+      "Rating": 4,
+      "Review": "good",
+      "picture": "j.jpg",
+      "id": "ac1c"
+    },
+    {
+      "id": "7972",
+      "bookname": "angular",
+      "Authorname": "Mani",
+      "Dateofpublishing": "12-34-2024",
+      "Rating": 4,
+      "Review": "good",
+      "picture": "j.jpg"
     }
   ]
 }

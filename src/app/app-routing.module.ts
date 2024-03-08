@@ -15,14 +15,15 @@ import { UpdateuserComponent } from './updateuser/updateuser.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { BookComponent } from './book/book.component';
+import { GuestComponent } from './guest/guest.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HeaderComponent
+    component: GuestComponent
 },
 {
-    path:'home',
+    path:'user_name',
     component:HomeComponent
 },
 {
@@ -66,7 +67,7 @@ const routes: Routes = [
     component:UsersComponent
 },
 {
-    path:'updateuser',
+    path:'updateuser/:id',
     component:UpdateuserComponent
 },
 {
