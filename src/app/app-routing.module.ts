@@ -16,7 +16,12 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { HomeComponent } from './home/home.component';
 import { BookComponent } from './book/book.component';
 import { GuestComponent } from './guest/guest.component';
-
+import { BookDetailComponent } from './book-detail/book-detail.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { RecomendationComponent } from './recomendation/recomendation.component';
+import { authGuard } from './auth.guard';
+import { adminauthGuard } from './adminauth.guard';
 const routes: Routes = [
   {
     path: '',
@@ -24,7 +29,8 @@ const routes: Routes = [
 },
 {
     path:'user_name',
-    component:HomeComponent
+    component:HomeComponent,
+    canActivate:[authGuard]
 },
 {
     path: 'about',
@@ -39,6 +45,11 @@ const routes: Routes = [
     component: BookComponent
 },
 {
+    path:'opendetails/:id',
+    component:BookDetailComponent,
+    canActivate:[authGuard]
+},
+{
     path:'contactus',
     component:ContactUsComponent
 },
@@ -51,33 +62,54 @@ const routes: Routes = [
     component:LoginComponent
 },
 {
+    path:'userlogin',
+    component:UserAuthComponent,
+    canActivate:[authGuard]
+},
+{
     path: 'admin',
-    component:AdminComponent
+    component:AdminComponent,
+    canActivate:[adminauthGuard]
 },
 {
     path:'book-add',
-    component:BookAddComponent
+    component:BookAddComponent,
+    canActivate:[adminauthGuard]
 },
 {
     path:'retrive-book',
     component:BookRetriveComponent,
+    canActivate:[adminauthGuard]
 },
 {
     path:'users',
-    component:UsersComponent
+    component:UsersComponent,
+    canActivate:[adminauthGuard]
 },
 {
     path:'updateuser/:id',
-    component:UpdateuserComponent
+    component:UpdateuserComponent,
+    canActivate:[adminauthGuard]
 },
 {
-    path:'bookupdate',
-    component:BookUpdateComponent
+    path:'bookupdate/:id',
+    component:BookUpdateComponent,
+    canActivate:[adminauthGuard]
 },
 {
     path:'user_dashboard',
     component:UserDashboardComponent
 },
+{
+    path:'wishlist',
+    component:WishlistComponent,
+    canActivate:[authGuard]
+},
+{
+    path:'recomended',
+    component:RecomendationComponent,
+    canActivate:[authGuard,adminauthGuard]
+}
 ];
 
 @NgModule({

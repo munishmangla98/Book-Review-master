@@ -24,6 +24,10 @@ import { UserBookPageComponent } from './user-book-page/user-book-page.component
 import { GuestComponent } from './guest/guest.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BookDetailComponent } from './book-detail/book-detail.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { RecomendationComponent } from './recomendation/recomendation.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +49,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     UserBookPageComponent,
     GuestComponent,
+    BookDetailComponent,
+    UserAuthComponent,
+    WishlistComponent,
+    RecomendationComponent,
   ],
   imports: [
     BrowserModule,

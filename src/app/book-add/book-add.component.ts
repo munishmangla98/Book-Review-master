@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { books } from '../data_type';
+import { BooksService } from '../servives/books.service';
 
 @Component({
   selector: 'app-book-add',
@@ -6,10 +8,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./book-add.component.css']
 })
 export class BookAddComponent {
-  Bookadd(data:object):void{
-    console.warn(data)
+  // for flashing the book added successfully message
+  addbookmessage: string|undefined;
+  constructor(private books:BooksService){}
+
+  Bookadd(data:books):void{
+    this.books.bookadd(data).subscribe((result)=>{
+      console.warn(result);
+      if(result){
+        this.addbookmessage="book add sucessfully"
+      }
+      setTimeout(() => {
+        this.addbookmessage = undefined;
+      }, 2000);
+
+    })
   }
 }
+
+
+
+
 // export class YourComponent {
 //   userData = {
 //     rating: null

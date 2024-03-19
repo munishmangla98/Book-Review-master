@@ -2,30 +2,30 @@
 
 <div class="bookupdate-container">
     <h2>Update Book</h2>
+    <h4>{{bookUpdatedMessage}}</h4>
     <!-- <form (submit)="submitForm()"> -->
-    <form #Bookupdateform="ngForm" (ngSubmit)="Bookupdate(Bookupdateform.value)">
+    <form #Bookupdateform="ngForm" (ngSubmit)="bookUpdate(Bookupdateform.value)">
         <div class="form-group">
             <label for="Bookname">Book Name:</label>
-            <input type="text" id="Bookname" name="Bookname" ngModel>
+            <input type="text" id="Bookname" name="Bookname" ngModel="{{bookdata?.Bookname}}">
 
         </div>
 
         <div class="form-group">
             <label for="BookAuthor">Author Name:</label>
-            <input type="text" id="BookAuthor" name="BookAuthor" ngModel>
+            <input type="text" id="BookAuthor" name="BookAuthor" ngModel="{{bookdata?.BookAuthor}}">
 
         </div>
 
         <div class="form-group">
             <label for="Dateofpublishing">Dateofpublishing:</label>
-            <input type="date" id="Dateofpublishing" name="Dateofpublishing" ngModel>
+            <input type="date" id="Dateofpublishing" name="Dateofpublishing" ngModel="{{bookdata?.Dateofpublishing}}">
 
         </div>
 
         <div class="form-group">
             <label for="Rating">Rating</label>
-            <input type="number" id="number" name="number">
-
+            <input type="number" id="number" name="number" ngModel="{{bookdata?.Rating}}" #number="ngModel">
         </div>
         <!-- <div class="form-group">
             <label for="Rating">Rating</label>
@@ -35,13 +35,13 @@
 
         <div class="form-group">
             <label for="Review">Review:</label>
-            <input type="text" id="Review" name="Review" ngModel>
+            <input type="text" id="Review" name="Review" ngModel="{{bookdata?.Review}}">
 
         </div>
 
         <div class="form-group">
             <label for="pic">Picture:</label>
-            <input type="file" id="pic" name="pic" accept="image/*" ngModel>
+            <input type="file" id="picture" name="picture" accept="image/*" ngModel="{{bookdata?.picture}}">
         </div>
 
         <button type="submit">Submit</button>

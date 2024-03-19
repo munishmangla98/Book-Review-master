@@ -1,22 +1,105 @@
 {
   "user_signup": [
     {
-      "username": "mani332",
-      "firstName": "Munish",
-      "lastName": "Mangla",
-      "email": "munishmangla98@gmail.com",
-      "phoneNumber": "9877674603",
-      "password": "1234",
-      "id": "367e"
-    },
-    {
       "username": "hello_12311",
       "firstName": "Munish3",
       "lastName": "Mangla",
       "email": "munishmangla98@gmail.com",
-      "phoneNumber": "9877674603",
+      "phoneNumber": "9877674603222222",
       "password": "12234",
       "id": "30a2"
+    },
+    {
+      "id": "44a2",
+      "firstName": "Munish",
+      "lastName": "Mangla",
+      "email": "munishmangla98@gmail.com",
+      "phoneNumber": 9877674603,
+      "username": "hello_123",
+      "password": "12358"
+    },
+    {
+      "id": "d198",
+      "firstName": "Munish",
+      "lastName": "Mangla",
+      "email": "munishmangla98@gmail.com",
+      "phoneNumber": 9877674603,
+      "username": "hello_222",
+      "password": "32322332"
+    },
+    {
+      "id": "0c4e",
+      "firstName": "Munish",
+      "lastName": "Mangla",
+      "email": "munishmangla98@gmail.com",
+      "phoneNumber": 9877674603,
+      "username": "hello_12311",
+      "password": "2345"
+    },
+    {
+      "id": "e2e2",
+      "firstName": "Munish",
+      "lastName": "Mangla",
+      "email": "munishmangla98@98gmail.com",
+      "phoneNumber": 9877674603,
+      "username": "efwfad",
+      "password": "wefqwfvr"
+    },
+    {
+      "id": "1e80",
+      "firstName": "Munish",
+      "lastName": "Mangla",
+      "email": "munishmangla98@gmail.com",
+      "phoneNumber": 9877674603,
+      "username": "mani332",
+      "password": "123"
+    },
+    {
+      "id": "2970",
+      "firstName": "Munish",
+      "lastName": "Mangla",
+      "email": "munishmangla98@gmail.com",
+      "phoneNumber": 9877674603,
+      "username": "hello_222",
+      "password": "123"
+    },
+    {
+      "id": "c14a",
+      "firstName": "Munish",
+      "lastName": "Mangla",
+      "email": "munishmangla98@gmail.com",
+      "phoneNumber": 9877674603,
+      "username": "hello_2",
+      "password": "123"
+    },
+    {
+      "id": "4396",
+      "firstName": "Munish",
+      "lastName": "Mangla",
+      "email": "munishmangla98@gmail.com",
+      "phoneNumber": 9877674603,
+      "username": "mani33",
+      "password": "456"
+    }
+  ],
+  "admin_signup": [
+    {
+      "id": "ab4c",
+      "firstName": "admin",
+      "lastName": "@readfreak",
+      "email": "admin98@readfreak.com",
+      "phoneNumber": 88888888888,
+      "username": "admin33",
+      "password": "456"
+    },
+    {
+      "id": "559d",
+      "firstName": "admin",
+      "lastName": "@readfreak",
+      "email": "admin98@readfreak.com",
+      "phoneNumber": 88888888888,
+      "username": "admin363",
+      "password": "4566"
     }
   ],
   "user_login": [
@@ -39,22 +122,234 @@
   ],
   "books": [
     {
-      "bookname": "angular",
-      "Authorname": "Mani",
-      "Dateofpublishing": "12-34-2024",
-      "Rating": 4,
-      "Review": "good",
-      "picture": "j.jpg",
-      "id": "ac1c"
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "number": "5",
+      "Review": "excellent  great",
+      "picture": "C:\\fakepath\\download.jpeg",
+      "id": "1771"
     },
     {
-      "id": "7972",
-      "bookname": "angular",
-      "Authorname": "Mani",
-      "Dateofpublishing": "12-34-2024",
-      "Rating": 4,
-      "Review": "good",
-      "picture": "j.jpg"
+      "id": "13cd",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "db56",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "e78d",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "f217",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "a5f2",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "3cce",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "d0ba",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "9318",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "5146",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "484a",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "c5f1",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "95cc",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "8ba4",
+      "Bookname": "php",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "",
+      "Rating": "",
+      "Review": "",
+      "picture": ""
+    },
+    {
+      "id": "db56",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "db56",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "484a",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "8ba4",
+      "Bookname": "php",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "",
+      "Rating": "",
+      "Review": "",
+      "picture": ""
+    },
+    {
+      "id": "db56",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "db56",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    }
+  ],
+  "Bookbyuser": [
+    {
+      "id": "1771",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "number": "5",
+      "Review": "excellent  great",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "13cd",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    },
+    {
+      "id": "e78d",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-09T22:06",
+      "Rating": 5,
+      "Review": "excellent ",
+      "picture": "C:\\fakepath\\download.jpeg"
+    }
+  ],
+  "recomendation": [
+    {
+      "id": "31bb",
+      "Bookname": "string",
+      "BookAuthor": "string",
+      "Rating": "string"
+    },
+    {
+      "id": "e46b",
+      "Bookname": "string",
+      "BookAuthor": "string",
+      "Rating": "string"
+    },
+    {
+      "id": "25d7",
+      "Bookname": "angular",
+      "BookAuthor": "jitesh Sir",
+      "Dateofpublishing": "2024-03-11T19:05",
+      "Rating": 4
     }
   ]
 }

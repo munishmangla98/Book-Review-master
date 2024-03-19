@@ -1,7 +1,7 @@
 <app-header> </app-header>
 
 <div class="user_name">
-<h1>Welcome user_name</h1>
+<h1>Welcome {{user_login}}</h1>
 </div>
 
 
@@ -9,7 +9,7 @@
 <div class="container">
     <div class="book-new">
         <div class="book-list">
-            <h3>Book List</h3>
+            <h3>Recomendated Book</h3>
             <ul>
                 <li>
                     <p>book Name</p>
@@ -34,103 +34,28 @@
                 </li>
             </ul>
             <div class="more-books">
-                <a routerLink="books">Add more-books</a>
+                <a routerLink="/books">Add more-books</a>
             </div>
         </div>
     </div>
 
-    <div class="book-reviews-container">
+    <div class="book-reviews-container" *ngIf="trending_book">
 
-        <div class="book-review">
-            <h2>Book Review</h2>
+        <div class="book-review"*ngFor="let item of trending_book">
+            <h2>Trending Book</h2>
 
-            <div class="book-info">
-                <img src="path/to/book-cover.jpg" alt="Book Cover"
+            <div class="book-info" >
+                <img src="{{item.picture}}" alt="Book Cover"
                     class="book-cover">
                 <div class="book-details">
-                    <h3>Title: Angular in Action</h3>
-                    <p>Author: Jeff Dutton</p>
-                    <p>Genre: Technical</p>
+                    <h3>{{item.Bookname}}</h3>
+                    <p>{{item.BookAuthor}}</p>
+                    <p>{{item.Review}}</p>
                 </div>
+                
             </div>
-
-            <div class="review-content">
-                <h4>Summary:</h4>
-                <p>
-                    "Angular in Action" is a comprehensive guide to building web
-                    applications with Angular.
-                    The book covers topics ranging from the basics of Angular to
-                    advanced
-                    concepts,
-                    making it suitable for both beginners and experienced
-                    developers.
-                </p>
-
-                <h4>Rating:</h4>
-                <p>⭐⭐⭐⭐</p>
-            </div>
-
-        </div>
-        <div class="book-review">
-            <h2>Book Review</h2>
-
-            <div class="book-info">
-                <img src="path/to/book-cover.jpg" alt="Book Cover"
-                    class="book-cover">
-                <div class="book-details">
-                    <h3>Title: Angular in Action</h3>
-                    <p>Author: Jeff Dutton</p>
-                    <p>Genre: Technical</p>
-                </div>
-            </div>
-
-            <div class="review-content">
-                <h4>Summary:</h4>
-                <p>
-                    "Angular in Action" is a comprehensive guide to building web
-                    applications with Angular.
-                    The book covers topics ranging from the basics of Angular to
-                    advanced
-                    concepts,
-                    making it suitable for both beginners and experienced
-                    developers.
-                </p>
-
-                <h4>Rating:</h4>
-                <p>⭐⭐⭐⭐</p>
-            </div>
-
-        </div>
-        <div class="book-review">
-            <h2>Book Review</h2>
-
-            <div class="book-info">
-                <img src="path/to/book-cover.jpg" alt="Book Cover"
-                    class="book-cover">
-                <div class="book-details">
-                    <h3>Title: Angular in Action</h3>
-                    <p>Author: Jeff Dutton</p>
-                    <p>Genre: Technical</p>
-                </div>
-
-            </div>
-
-            <div class="review-content">
-                <h4>Summary:</h4>
-                <p>
-                    "Angular in Action" is a comprehensive guide to building web
-                    applications with Angular.
-                    The book covers topics ranging from the basics of Angular to
-                    advanced
-                    concepts,
-                    making it suitable for both beginners and experienced
-                    developers.
-                </p>
-
-                <h4>Rating:</h4>
-                <p>⭐⭐⭐⭐</p>
-            </div>
-
+            
+            <a style="align-items: center; margin-left: 250px;" routerLink="/opendetails/{{item.id}}">More Details</a>
         </div>
     </div>
 

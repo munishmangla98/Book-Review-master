@@ -16,12 +16,14 @@ usermessage :undefined|string;
   ngOnInit(data: user_signup):void{
     this.user_deleted_Update_list(data);
   }
+
+  
   deleteuser(id:string):void{
     // console.warn("test id", id)
     this.user.deleteUser(id).subscribe((result)=>{
     if(result){
       this.usermessage="user delete";
-      // this.user_deleted_Update_list(data:user_signup);
+      this.ngOnInit;
       }
     })
 

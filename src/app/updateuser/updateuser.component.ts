@@ -30,6 +30,7 @@ export class UpdateuserComponent {
     this.user.updated_user(data).subscribe((result)=>{
       if(result){
         this.userUpdatedMessage="user updated";
+        
       }
     });
     setTimeout(() => {
