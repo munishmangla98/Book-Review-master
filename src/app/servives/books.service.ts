@@ -5,7 +5,12 @@ import { addedbooks, books, recomendation } from '../data_type';
 @Injectable({
   providedIn: 'root'
 })
+
 export class BooksService {
+  constructor(private http: HttpClient){}
+  
+
+  
   toggleReviewStatus(bookId: string) {
     throw new Error('Method not implemented.');
   }
@@ -13,7 +18,7 @@ export class BooksService {
     throw new Error('Method not implemented.');
   }
 
-  constructor(private http: HttpClient) { }
+
   bookadd(data: books) {
     return this.http.post('http://localhost:3000/books', data)
   }
@@ -28,6 +33,7 @@ export class BooksService {
   deletebook(id: string) {
     return this.http.delete(`http://localhost:3000/books/${id}`)
   }
+  
   getbook(id: string) {
     return this.http.get<books>(`http://localhost:3000/books/${id}`)
   }
@@ -41,26 +47,34 @@ export class BooksService {
     return this.http.get<books>(`http://localhost:3000/books/${id}`);
   }
   search(query: string) {
-    let url = `http://localhost:3000/books/?`;
-
-    if (query) {
-      url += `Bookname=${query}`;
-    }
-
-    if (query && url.includes('=')) {
-      url += `&BookAuthor=${query}`;
-    } else if (query) {
-      url += `BookAuthor=${query}`;
-    }
-
-    if (query && url.includes('=')) {
-      url += `&Rating=${query}`;
-    } else if (query) {
-      url += `Rating=${query}`;
-    }
-
-    return this.http.get<books[]>(url);
+    return this.http.get<books[]>(
+      `http://localhost:3000/books?=${query}`);
   }
+  
+
+
+
+
+    // search(query: string) {
+    //   let url = `http://localhost:3000/books/?`;
+  
+    //   if (query) {
+    //     url += `Bookname=${query}`;
+    //   }
+  
+    //   if (query && url.includes('=')) {
+    //     url += `&BookAuthor=${query}`;
+    //   } else if (query) {
+    //     url += `BookAuthor=${query}`;
+    //   }
+  
+    //   if (query && url.includes('=')) {
+    //     url += `&Rating=${query}`;
+    //   } else if (query) {
+    //     url += `Rating=${query}`;
+    //   }
+  //   return this.http.get<books[]>(url);
+  // }
 
 
 
@@ -80,6 +94,7 @@ export class BooksService {
   }
 
 
+  
   addrecomendation(data: recomendation) {
     return this.http.post('http://localhost:3000/recomendation', data)
     console.warn(data)

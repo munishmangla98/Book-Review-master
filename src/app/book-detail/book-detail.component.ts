@@ -25,13 +25,36 @@ export class BookDetailComponent {
       this.bookdata = data
     })
   }
+  // ngOnInit(): void {
+  //   let bookId = this.route.snapshot.paramMap.get('id')
+  //   bookId && this.book.openDetails(bookId).subscribe((data) => {
+  //     console.warn(data);
+  //     this.bookdata = data;
+  //     let cartData = localStorage.getItem('localCart');
+  //     if (bookId && cartData) {
+  //       let items = JSON.parse(cartData);
+  //       items = items.filter((item: books) => bookId === item.id.toString());
+  //       if (items.length) {
+  //         this.removeCart = true
+  //       } else {
+  //         this.removeCart = false
+  //       }
+  //     }
+  //   })
+  // }
+
+  
+  toggle2() {
+    this.toggleService.toggle();
+  }
+
   BookReviewadd(data: books): void {
     console.warn(data);
     // to update the which we update in form
     if (this.bookdata) {
       data.id = this.bookdata.id;
     }
-    // for flashing message
+// for flashing message
     this.book.updated_book(data).subscribe((result) => {
       if (result) {
         this.addbookreviewmessage = "book Review";
@@ -41,6 +64,10 @@ export class BookDetailComponent {
       this.addbookreviewmessage = undefined;
     }, 2000);
   }
+
+
+
+
   BookReviewadd1(value: any) {
     console.log('Submitted review:', value);
     // Add your logic for submitting the review here

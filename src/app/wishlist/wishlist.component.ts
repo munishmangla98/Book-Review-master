@@ -30,7 +30,7 @@ export class WishlistComponent {
     if(result){
       this.bookremovemessage="book remove";
       this.router.navigate(['/wishlist'],{queryParams:{refresh:Date.now()}});
-      this.ngOnInit
+      // this.ngOnInit
       
       }
     })    

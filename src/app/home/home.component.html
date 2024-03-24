@@ -1,5 +1,5 @@
 <app-header> </app-header>
-
+<div class="home">
 <div class="user_name">
 <h1>Welcome {{user_login}}</h1>
 </div>
@@ -33,9 +33,7 @@
                     <p>Preview</p>
                 </li>
             </ul>
-            <div class="more-books">
                 <a routerLink="/books">Add more-books</a>
-            </div>
         </div>
     </div>
 
@@ -55,7 +53,7 @@
                 
             </div>
             
-            <a style="align-items: center; margin-left: 250px;" routerLink="/opendetails/{{item.id}}">More Details</a>
+            <a routerLink="/opendetails/{{item.id}}">More Details</a>
         </div>
     </div>
 
@@ -94,4 +92,5 @@
             </ul>
         </div>
     </div>
+</div>
 </div>

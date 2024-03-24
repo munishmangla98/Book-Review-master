@@ -304,31 +304,14 @@
   ],
   "Bookbyuser": [
     {
-      "id": "1771",
-      "Bookname": "angular",
-      "BookAuthor": "jitesh Sir",
-      "Dateofpublishing": "2024-03-09T22:06",
-      "number": "5",
-      "Review": "excellent  great",
-      "picture": "C:\\fakepath\\download.jpeg"
-    },
-    {
-      "id": "13cd",
+      "id": "db56",
       "Bookname": "angular",
       "BookAuthor": "jitesh Sir",
       "Dateofpublishing": "2024-03-09T22:06",
       "Rating": 5,
       "Review": "excellent ",
-      "picture": "C:\\fakepath\\download.jpeg"
-    },
-    {
-      "id": "e78d",
-      "Bookname": "angular",
-      "BookAuthor": "jitesh Sir",
-      "Dateofpublishing": "2024-03-09T22:06",
-      "Rating": 5,
-      "Review": "excellent ",
-      "picture": "C:\\fakepath\\download.jpeg"
+      "picture": "C:\\fakepath\\download.jpeg",
+      "bookid": "db56"
     }
   ],
   "recomendation": [

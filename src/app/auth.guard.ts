@@ -1,5 +1,4 @@
 import { CanActivateFn } from '@angular/router';
-import{UserSignupService} from 'src/app/servives/user_signup.service';
 
 
 export const authGuard: CanActivateFn = (route, state)=> {

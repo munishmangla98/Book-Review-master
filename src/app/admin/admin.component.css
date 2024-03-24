@@ -37,6 +37,9 @@ li{
     justify-content: center;
     align-items: center;
 }
+.link ul{
+    margin-top:50px ;
+}
 
 
   a{
@@ -84,4 +87,18 @@ li{
         text-decoration: none;
         font-size: large;
         }
+        .link ul{
+            margin-top:50px ;
+            display: flex;
+        }
+}
+@media screen and (max-width: 500px){
+    .link ul{
+        margin-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .link li{
+        margin: 10px;
+    }
 }

@@ -14,6 +14,7 @@ export class HeaderComponent {
   searchbook: undefined | books[];
   userName: string = "";
   adminName: string = "";
+  cart=0;
 
 
   menuType: string = 'default';

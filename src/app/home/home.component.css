@@ -6,9 +6,11 @@ app-header {
 .user_name{
     text-align: center;
     margin-bottom: 1px;
-    padding: 0%;
-    margin: 0%;
+    /* padding: 0%;
+    margin: 0%; */
     color: #007bff;
+    position: static;
+    margin-top: 0px;
 }
 
 .container {
@@ -86,7 +88,7 @@ app-header {
   .book-info2 ul , .book-list ul{
     padding-left: 3%;
   }
-  a{
+  .book-review a{
     background-color: #007bff;
     color: #fff;
     padding: 10px 15px;
@@ -96,7 +98,24 @@ app-header {
     margin: 10px;
     margin-left: 8px;
     text-decoration: none;
+    align-items: center;
+    margin-left: 250px;
     }
+
+   .book-list a{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    margin-left: 8px;
+    text-decoration: none;
+    align-items: center;
+    }
+
+
     .book-cover {
       width: 120px;
       height: 160px;
@@ -161,4 +180,53 @@ app-header {
     z-index: 100; /* Optional: Set a higher z-index to ensure it appears above other elements */
     margin: 0;
     padding: 0%;
+}
+
+
+
+@media screen and (max-width: 768px){
+
+  .home{
+    margin-left: 18px;
+    width: 100%;
+  }
+ .book-reviews-container{
+  margin-left: 20px;
+  margin-right:20px ;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  
+ }
+ .container{
+  font-size: 10px;
+  width: 100%;
+  margin-right: 30px;
+ }
+ .book-new,.book-status{
+  font-size: 10px;
+display: flex;
+width: 100%;
+ }
+.book-list{
+  width: 100%;
+}
+
+
+
+.book-reviews {
+width: 10%;
+}
+.book-review a{
+  /* margin-top: 30px; */
+  align-items: center;
+  display: flex;
+  justify-content: end;
+}
+@media screen and (max-width: 425px) {
+  .book-list a {
+display: flex;
+
+  }
+}
 }

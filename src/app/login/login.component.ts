@@ -21,6 +21,9 @@ export class LoginComponent {
       if(isError){
         this.authError="Username or password is not correct";
       }
+      setTimeout(() => {
+        
+      }, 2000);
     })
   }
   adminlogin(adminLogin: admin_signup): void {
@@ -29,6 +32,9 @@ export class LoginComponent {
       if(isError){
         this.authError="username or password is not correct";
       }
+      setTimeout(() => {
+        
+      }, 2000);
     })
   }
 

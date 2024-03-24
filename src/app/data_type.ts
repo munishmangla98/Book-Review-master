@@ -8,7 +8,8 @@ export interface user_signup {
     phone_No: string,
     username: string,
     password: string,
-    id: string
+    id: string,
+    // username:string
 }
 
 export interface admin_signup {
@@ -32,24 +33,27 @@ export interface user_login {
 }
 
 export interface books {
-    reviewActivated: boolean;
     id: string;
     Bookname: string,
     BookAuthor: string,
     Dateofpublishing: Date,
     Rating: number,
     Review: string,
-    picture: string
+    picture: string,
+    bookid:string
 }
 
 export interface addedbooks {
+    bookid: string,
+    username?: string; 
     id: string;
     Bookname: string,
     BookAuthor: string,
     Dateofpublishing: Date,
     Rating: number,
     Review: string,
-    picture: string
+    picture: string,
+    
 }
 
 export interface recomendation {

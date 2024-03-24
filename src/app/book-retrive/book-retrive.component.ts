@@ -40,7 +40,7 @@ sharedService: any;
 
 
 
-  toggle() {
+  toggle1() {
     this.toggleService.toggle();
   }
 
