@@ -1,8 +1,7 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit ,Input} from '@angular/core';
 import { books } from '../data_type';
 import { BooksService } from '../servives/books.service';
 import { ActivatedRoute } from '@angular/router';
-import { BookRetriveComponent } from '../book-retrive/book-retrive.component'
 import { ToggleService } from '../servives/toggle.service';
 
 
@@ -24,6 +23,7 @@ export class BookDetailComponent {
       console.warn(data);
       this.bookdata = data
     })
+    
   }
   // ngOnInit(): void {
   //   let bookId = this.route.snapshot.paramMap.get('id')
@@ -43,10 +43,25 @@ export class BookDetailComponent {
   //   })
   // }
 
-  
-  toggle2() {
-    this.toggleService.toggle();
+  // display2=false;
+  // toggle2() {
+  //   this.toggleService.toggleVisibility;
+  // }
+
+
+  displayForm: boolean = false;
+
+  toggleForm(event: any) {
+    this.displayForm = !this.displayForm;
   }
+  
+  // isVisible: boolean = false;
+  // toggle3() {
+  //   this.toggleService.isVisible$.subscribe(isVisible => {
+  //     this.isVisible = isVisible;
+  //   });
+  // }
+
 
   BookReviewadd(data: books): void {
     console.warn(data);
@@ -54,7 +69,7 @@ export class BookDetailComponent {
     if (this.bookdata) {
       data.id = this.bookdata.id;
     }
-// for flashing message
+    // for flashing message
     this.book.updated_book(data).subscribe((result) => {
       if (result) {
         this.addbookreviewmessage = "book Review";

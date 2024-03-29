@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BooksService } from '../servives/books.service';
 import { books } from '../data_type';
 import { Router } from '@angular/router';
@@ -39,9 +39,9 @@ sharedService: any;
   }
 
 
-
-  toggle1() {
-    this.toggleService.toggle();
+  @Output() toggleFormEvent = new EventEmitter<void>();
+  toggleForm() {
+    this.toggleFormEvent.emit();
   }
 
 }

@@ -48,7 +48,7 @@ export class BooksService {
   }
   search(query: string) {
     return this.http.get<books[]>(
-      `http://localhost:3000/books?=${query}`);
+      `http://localhost:3000/books?Bookname=${query}`);
   }
   
 
@@ -56,22 +56,22 @@ export class BooksService {
 
 
     // search(query: string) {
-    //   let url = `http://localhost:3000/books/?`;
+    //   let url = `http://localhost:3000/books?`;
   
     //   if (query) {
-    //     url += `Bookname=${query}`;
+    //     url + Bookname=${query}`;
     //   }
   
     //   if (query && url.includes('=')) {
-    //     url += `&BookAuthor=${query}`;
+    //     url += &BookAuthor=${query}`;
     //   } else if (query) {
-    //     url += `BookAuthor=${query}`;
+    //     url = BookAuthor=${query}`;
     //   }
   
     //   if (query && url.includes('=')) {
     //     url += `&Rating=${query}`;
     //   } else if (query) {
-    //     url += `Rating=${query}`;
+    //     url = Rating=${query}`;
     //   }
   //   return this.http.get<books[]>(url);
   // }
@@ -85,10 +85,15 @@ export class BooksService {
     return this.http.post('http://localhost:3000/Bookbyuser', addto)
   }
 
+  // addlist(data: addedbooks) {
+  //   return this.http.get<books[]>("http://localhost:3000/Bookbyuser?username"+localStorage.getItem('username'))
+  // }
+
+
+  
   addlist(data: addedbooks) {
     return this.http.get<books[]>("http://localhost:3000/Bookbyuser")
   }
-
   removefromCart(id: string) {
     return this.http.delete(`http://localhost:3000/Bookbyuser/${id}`)
   }

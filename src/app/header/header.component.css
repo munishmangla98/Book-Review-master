@@ -73,6 +73,28 @@
 .button{
     text-align: center;
 }
+.suggested_result{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #fff;
+    width: 231px;
+    top: 27px;
+    border: 1px solid #ddd;
+    /* height: 44px; */
+    }
+    .suggested_result li {
+        padding:10px;
+        border: 1px solid #ddd;
+        margin: 0px;
+      }
+      .suggested_result li a{
+        cursor: pointer;
+        color: blueviolet;
+      }
+      .suggested-search ul{
+        height: 2px;
+      }
 @media screen and (max-width: 768px) {
     .nav p{
         color: #007bff;
@@ -105,16 +127,7 @@ app-header {
     position: sticky;
     top: 0;
 }
-.suggested_result{
-position: absolute;
-display: list-item !important;
-z-index: 10;
-background-color: #fff;
-width: 300px;
-top: 27px;
-border: 1px solid #ddd;
-height: 50px;
-}
+
 .nav-search{
     margin-left: 200px;
 }

@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <div class="book-reviews-container">
 
     <div class="book-info">
@@ -10,11 +10,14 @@
             <p>{{bookdata?.BookAuthor}}</p>
             <p>{{bookdata?.Review}}</p>
 
-            <div *ngIf="toggle2">
+            
+            <!-- <app-book-retrive (toggleFormEvent)="toggleForm($event)"></app-book-retrive> -->
+
+            <div *ngIf="displayForm">
                 <form #BookReviewaddform="ngForm"
                     (ngSubmit)="BookReviewadd(BookReviewaddform.value)">
                     <label style="font-size: 24px;" for="Review">Review:</label>
-                    <input style="height: 35px; margin-left: 5px;" type="text"
+                    <input style="height: 35px; margin-left: 3px;" type="text"
                         id="Review" name="Review" ngModel>
                     <a type="submit">Submit</a>
                 </form>

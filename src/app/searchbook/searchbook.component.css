@@ -25,7 +25,10 @@ body {
     box-sizing: border-box;
     text-align: center;
 }
-
+.more-books{
+    margin-top: 25px;
+    margin-left: 100px;
+}
 .more-books a{
     align-items: center;
     background-color: #007bff;
@@ -39,15 +42,13 @@ body {
     align-items: center; 
 
     }
-    .more-books{
-        margin-left: 112px;
-    }
+    
     
     /* Media query for smaller screens */
     @media screen and (max-width: 768px) {
         .more-books {
             margin: 50px;
-            margin-left: 270px;
+            margin-left: 150px;
             margin-top: 60px;
             margin-bottom: 5px;
         }
@@ -55,25 +56,30 @@ body {
             margin-left: 1px;
             width: 50px;
         }
-        /* .card-container{
+        .card-container{
             margin-left: 60px;
-        } */
+        }
         .more-books a {
             margin: 10px;
             margin-bottom: 5px;
         }
+        .more-books{
+            margin-left: 250px;
+        }
         @media screen and (max-width: 480px) {
             .more-books {
                 width: 100%; 
-                margin-left: 120px;
             }
             .card {
                 width: 40%;
                 margin-right: 20px;
             }
             .card-container{
-                margin-left: 47px;
+                margin-left: 80px;
                 width: 100%;
+            }
+            .more-books{
+                margin-left: 160px;
             }
         
     }

@@ -22,6 +22,7 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { RecomendationComponent } from './recomendation/recomendation.component';
 import { authGuard } from './auth.guard';
 import { adminauthGuard } from './adminauth.guard';
+import { SearchbookComponent } from './searchbook/searchbook.component';
 const routes: Routes = [
   {
     path: '',
@@ -109,6 +110,10 @@ const routes: Routes = [
     path:'recomended',
     component:RecomendationComponent,
     canActivate:[authGuard,adminauthGuard]
+},
+{
+    path:'search/:queary',
+    component:SearchbookComponent,
 }
 ];
 

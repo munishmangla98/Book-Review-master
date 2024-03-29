@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 
 <body>
 <p style="text-align: center; font-weight: bold; bottom: 0;">{{bookremovemessage}}</p>
@@ -7,7 +7,7 @@
         <div class="card" *ngFor="let item of bookaddList">
             <h2>{{item.Bookname}}</h2>
             <p>{{item.BookAuthor}}</p>
-            <p>Rating</p>
+            <p>{{item.Rating}}</p>
             <br>
             <button (click)="removebook(item.id)">Remove</button>
             <button style="margin: 10px;"><a style="text-decoration: none;" routerLink="/opendetails/{{item.id}}">More Details</a></button>

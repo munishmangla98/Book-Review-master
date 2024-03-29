@@ -1,18 +1,18 @@
 <!-- <app-header></app-header> -->
 
-<body>
-    <p style="text-align: center; font-weight: bold;">{{addbookmessage}}</p>
+    <!-- <p style="text-align: center; font-weight: bold;">{{addbookmessage}}</p> -->
     <div class="more-books">
         <a routerLink="/recomended">Add books recomendation</a>
     </div>
 
-<div class="card-container" *ngIf="bookList">
+<div class="card-container" *ngFor="let item of searchResult">
     
-    <div class="card" *ngFor="let item of bookList">
+    <div class="card">
+        <p>hell</p>
             <p style="text-align: center; font-weight: bold;">{{item.Bookname}}</p>
             <p>{{item.BookAuthor}}</p> 
-            <p>Rating</p>
-            <button (click)="addtowishlist(item)">Add to read</button>
+            <p>{{item.Rating}}</p>
+            <!-- <button (click)="addtowishlist(item)">Add to read</button> -->
             <br>
             <br>
             <button><a style="text-decoration: none;" routerLink="/opendetails/{{item.id}}">More Details</a></button>
@@ -20,4 +20,3 @@
         </div>
     </div>
 
-</body>

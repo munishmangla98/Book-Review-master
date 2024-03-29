@@ -27,30 +27,51 @@ export class HeaderComponent {
   }
   // for changing navbar
 
+  // ngOnInit(): void {
+  //   this.router.events.subscribe((val: any) => {
+  //     if (val.url) {
+  //       if (localStorage.getItem('user_signup')) {
+  //         let usersighupStore = localStorage.getItem('user_signup');
+  //         let userSignupData = usersighupStore && JSON.parse(usersighupStore);
+  //         this.userName = userSignupData.username;
+  //         this.menuType = 'user_signup';
+        
+  //       }
+  //       else if (localStorage.getItem('admin_signup')) {
+  //         let Admin = localStorage.getItem('admin_signup');
+  //         let userData = Admin && JSON.parse(Admin);
+  //         console.warn(userData);
+  //         this.adminName = userData.firstName;
+  //         this.menuType = 'admin_signup';
+          
+  //       }
+  //       else {
+  //         this.menuType = "default";
+  //       }
+  //     }
+  //   });
+  // }
   ngOnInit(): void {
     this.router.events.subscribe((val: any) => {
       if (val.url) {
-        if (localStorage.getItem('user_signup') && val.url.includes('user_signup')) {
-          let usersighupStore = localStorage.getItem('user_signup');
-          let userSignupData = usersighupStore && JSON.parse(usersighupStore);
-          this.userName = userSignupData.firstName;
+        let userSignupData = JSON.parse(localStorage.getItem('user_signup') || '{}');
+        let userData = JSON.parse(localStorage.getItem('admin_signup') || '{}');
+  
+        if (userSignupData.username) {
+          this.userName = userSignupData.username;
           this.menuType = 'user_signup';
-        
-        }
-        else if (localStorage.getItem('admin_signup')) {
-          let Admin = localStorage.getItem('admin_signup');
-          let userData = Admin && JSON.parse(Admin);
+        } else if (userData.firstName) {
+          console.warn(userData);
           this.adminName = userData.firstName;
           this.menuType = 'admin_signup';
-          
-        }
-        else {
-          this.menuType = "default";
+        } else {
+          this.menuType = 'default';
         }
       }
     });
   }
 
+  
   logout(){
     localStorage.clear();
     console.warn(this.userName + " has logged out");
@@ -75,12 +96,17 @@ export class HeaderComponent {
         if (result.length > 5) {
           result.length = 5;
         }
+        this.searchbook=result;
         console.warn(result);
       });
     }
   }
   hidesearch() {
     this.searchbook = undefined;
+  }
+  submitSearch(val:string){
+    console.warn(val)
+  this.router.navigate([`search/${val}`]);
   }
 
  

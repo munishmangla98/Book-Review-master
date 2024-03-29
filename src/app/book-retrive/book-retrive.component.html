@@ -1,4 +1,4 @@
-<app-header> </app-header>
+<!-- <app-header> </app-header> -->
 <!-- Add this section to display the table with Activate/Deactivate buttons -->
 <a style="align-items: center;" routerLink="/book-add">add-book</a>
 <p style="align-items: center;font-weight: bold;">{{bookmessage}}</p>
@@ -24,11 +24,9 @@
         <td>{{ book.Dateofpublishing }}</td>
         <td>{{ book.Rating }}</td>
         <td>{{ book.Review }}</td>
-        <!-- <button>Activate</button>
-        <button>Deactivate</button> -->
         <button (click)="deletebook(book.id)">Delete</button>
       <button><a routerLink="/bookupdate/{{book.id}}">update-Book</a></button>
-      <button (click)="toggle1()">Activate Review</button>
+      <button (click)="toggleForm()">Activate Review</button>
 
       </tr>
             <!--<button>Activate</button>

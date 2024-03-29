@@ -3,12 +3,11 @@
     <p routerLink="/">Read Freak</p>
     </div>
     <div *ngIf="menuType!=='user_signup'" class="nav-search">
-
         <!-- <div class="nav-search"> -->
-        <input type="text" (keyup)="search($event)"
+        <input #searchInput type="text" (keyup)="search($event)"
             placeholder="Search for Book" (blur)="hidesearch()" />
-        <button class="button">Search
-        </button>
+        <button (click)="submitSearch(searchInput.value)" class="button">Search</button>
+                    
         <ul class="suggested_result" *ngIf="searchbook">
             <li *ngFor="let item of searchbook">
                 <a>{{item.Bookname}}</a>
@@ -36,7 +35,7 @@
             <li><a routerLink="/about">About</a></li>
             <li><a routerLink="/books">Book</a></li>
             <li><a routerLink="/wishlist">wish list({{cart}})</a></li>
-            <!-- <li><a>{{userName | titlecase}}</a></li> -->
+            <li><a>{{userName | titlecase}}</a></li>
             <li><a (click)="logout()">Logout</a></li>
         </ul>
         <ul *ngSwitchCase="'admin_signup'"  class="main-nav">
