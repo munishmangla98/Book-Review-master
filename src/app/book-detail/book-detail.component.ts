@@ -1,5 +1,5 @@
-import { Component, ViewChild, AfterViewInit ,Input} from '@angular/core';
-import { books } from '../data_type';
+import { Component, ViewChild, AfterViewInit, Input } from '@angular/core';
+import { books, review } from '../data_type';
 import { BooksService } from '../servives/books.service';
 import { ActivatedRoute } from '@angular/router';
 import { ToggleService } from '../servives/toggle.service';
@@ -14,16 +14,23 @@ import { ToggleService } from '../servives/toggle.service';
 export class BookDetailComponent {
   bookdata: undefined | books;
   addbookreviewmessage: string | undefined;
+  addbookmessage: string | undefined;
+  reviewForm: any;
+  username: any;
 
-  constructor(private route: ActivatedRoute, private book: BooksService, public toggleService: ToggleService) { }
-  // to retrive the data in Card
+  constructor(private route: ActivatedRoute, private books: BooksService, public toggleService: ToggleService) { }
   ngOnInit(): void {
-    let bookId = this.route.snapshot.paramMap.get('id')
-    bookId && this.book.openDetails(bookId).subscribe((data) => {
-      console.warn(data);
-      this.bookdata = data
-    })
-    
+    const bookId = this.route.snapshot.paramMap.get('id');
+    if (bookId) {
+      this.books.openDetails(bookId).subscribe((data) => {
+        console.warn(data);
+        this.bookdata = data;
+        // Store bookdata in local storage
+        localStorage.setItem('bookdata', JSON.stringify(this.bookdata));
+      });
+    }
+
+
   }
   // ngOnInit(): void {
   //   let bookId = this.route.snapshot.paramMap.get('id')
@@ -43,50 +50,70 @@ export class BookDetailComponent {
   //   })
   // }
 
-  // display2=false;
-  // toggle2() {
-  //   this.toggleService.toggleVisibility;
-  // }
 
-
-  displayForm: boolean = false;
+  displayForm: boolean = true;
 
   toggleForm(event: any) {
     this.displayForm = !this.displayForm;
   }
-  
-  // isVisible: boolean = false;
-  // toggle3() {
-  //   this.toggleService.isVisible$.subscribe(isVisible => {
-  //     this.isVisible = isVisible;
+
+  // BookReviewadd1(data: books): void {
+  //   console.warn(data);
+  //   // to update the which we update in form
+  //   if (this.bookdata) {
+  //     data.id = this.bookdata.id;
+  //   }
+  //   // for flashing message
+  //   this.book.addreview(data).subscribe((result) => {
+  //     if (result) {
+  //       this.addbookreviewmessage = "book Review";
+  //     }
   //   });
+  //   setTimeout(() => {
+  //     this.addbookreviewmessage = undefined;
+  //   }, 2000);
   // }
 
-
-  BookReviewadd(data: books): void {
-    console.warn(data);
-    // to update the which we update in form
-    if (this.bookdata) {
-      data.id = this.bookdata.id;
+  addReview(data: review): void {
+    // Retrieve username from localStorage
+    const userDataString = localStorage.getItem('user_signup');
+    let username: string | undefined;
+    if (userDataString) {
+      const userData = JSON.parse(userDataString);
+      username = userData[0].username;
     }
-    // for flashing message
-    this.book.updated_book(data).subscribe((result) => {
-      if (result) {
-        this.addbookreviewmessage = "book Review";
-      }
-    });
-    setTimeout(() => {
-      this.addbookreviewmessage = undefined;
-    }, 2000);
+  
+    // Retrieve bookdata from localStorage
+    const bookDataString = localStorage.getItem('bookdata');
+    let bookId: string | undefined;
+    if (bookDataString) {
+      const bookdata = JSON.parse(bookDataString);
+      bookId = bookdata.id;
+    }
+  
+    // Add username and book_id to the data object
+    if (username && bookId) {
+      data.user_name = username;
+      data.book_id = bookId;
+  
+      // Call addreview API
+      this.books.addreview(data).subscribe((result) => {
+        console.warn(result);
+        if (result) {
+          this.addbookmessage = "Review added successfully";
+        }
+        setTimeout(() => {
+          this.addbookmessage = undefined;
+        }, 2000);
+      });
+    } else {
+      console.error('Username or bookdata not found in localStorage');
+    }
   }
 
+  
+  
 
-
-
-  BookReviewadd1(value: any) {
-    console.log('Submitted review:', value);
-    // Add your logic for submitting the review here
-  }
 
 
 }

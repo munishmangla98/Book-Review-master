@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { addedbooks, books, recomendation } from '../data_type';
+import { addedbooks, books, recomendation, review } from '../data_type';
 
 @Injectable({
   providedIn: 'root'
@@ -18,27 +18,35 @@ export class BooksService {
     throw new Error('Method not implemented.');
   }
 
-
+  
   bookadd(data: books) {
     return this.http.post('http://localhost:3000/books', data)
   }
   booklist(data: books) {
     return this.http.get<books[]>("http://localhost:3000/books")
   }
-
-  addreview(addReview: books, id: string) {
-    return this.http.post(`http://localhost:3000/books/${addReview.id}`, addReview)
-  }
-
+  
+  
   deletebook(id: string) {
     return this.http.delete(`http://localhost:3000/books/${id}`)
   }
+
   
+  addreview(data: review) {
+    return this.http.post('http://localhost:3000/review', data)
+  }
+
+  getreview(book_id: string) {
+    return this.http.get(`http://localhost:3000/review/${book_id}`)
+  }
+  
+
+
   getbook(id: string) {
     return this.http.get<books>(`http://localhost:3000/books/${id}`)
   }
-
-
+  
+  
   
   updated_book(data: books) {
     return this.http.put<books>(`http://localhost:3000/books/${data.id}`, data);

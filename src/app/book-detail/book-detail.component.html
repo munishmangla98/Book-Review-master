@@ -1,28 +1,46 @@
 <!-- <app-header></app-header> -->
 <div class="book-reviews-container">
-
+    <p style="color: green; align-items: center;">{{addbookreviewmessage}}</p>
     <div class="book-info">
-        <p>{{addbookreviewmessage}}</p>
+
         <img src="{{bookdata?.picture}}" alt="Book Cover"
             class="book-cover">
         <div class="book-details">
             <h3>{{bookdata?.Bookname}}</h3>
             <p>{{bookdata?.BookAuthor}}</p>
-            <p>{{bookdata?.Review}}</p>
+            <!-- <p>{{bookdata?.Review}}</p> -->
 
-            
             <!-- <app-book-retrive (toggleFormEvent)="toggleForm($event)"></app-book-retrive> -->
-
+            <br>
             <div *ngIf="displayForm">
                 <form #BookReviewaddform="ngForm"
-                    (ngSubmit)="BookReviewadd(BookReviewaddform.value)">
-                    <label style="font-size: 24px;" for="Review">Review:</label>
+                    (ngSubmit)="addReview(BookReviewaddform.value)">
+                    <label style="font-size: 24px;" for="review">Review:</label>
                     <input style="height: 35px; margin-left: 3px;" type="text"
-                        id="Review" name="Review" ngModel>
-                    <a type="submit">Submit</a>
+                        id="review" name="review" ngModel>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
 
         </div>
+        <br>
+    </div>
+    <div class="book-list-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Review</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Use *ngFor to iterate over your book data and populate the table rows -->
+                <!-- <tr *ngFor="let book of bookList"> -->
+                <tr>
+                    <td>book.Review</td>
+                    <td>book.username</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

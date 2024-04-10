@@ -43,6 +43,13 @@ export interface books {
     picture: string,
     bookid:string
 }
+export interface review{
+    book_id: string;
+    bookdata: any;
+    user_name: string;
+    id: string,
+    review: string
+}
 
 export interface addedbooks {
     bookid: string,

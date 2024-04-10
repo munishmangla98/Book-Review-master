@@ -18,15 +18,6 @@ export class AddbyuserComponent {
   
   
     constructor(private books:BooksService, private router:Router , private toggleService: ToggleService){}
-    // ngOnInit(data: books):void{
-    //   console.warn(data)
-    //   this.books.booklist(data).subscribe((result)=>{
-    //     console.warn(result);
-    //     if(result){
-    //       this.bookList=result;
-    //     }
-    //   });
-    // }
     ngOnInit(): void {
       // Retrieve data from localStorage
       const userDataString = localStorage.getItem('admin_signup');
