@@ -16,6 +16,7 @@ ngOnInit(): void {
   console.warn(query);
   query && this.books.search(query).subscribe((result)=>{
     this.searchResult=result;
+    console.warn(result)
     
   })
   

@@ -33,6 +33,7 @@ export interface user_login {
 }
 
 export interface books {
+    user_name: string;
     id: string;
     Bookname: string,
     BookAuthor: string,
@@ -53,6 +54,7 @@ export interface addedbooks {
     Rating: number,
     Review: string,
     picture: string,
+    user_name:string
     
 }
 

@@ -37,6 +37,9 @@ export class BooksService {
   getbook(id: string) {
     return this.http.get<books>(`http://localhost:3000/books/${id}`)
   }
+
+
+  
   updated_book(data: books) {
     return this.http.put<books>(`http://localhost:3000/books/${data.id}`, data);
   }
@@ -94,6 +97,8 @@ export class BooksService {
   addlist(data: addedbooks) {
     return this.http.get<books[]>("http://localhost:3000/Bookbyuser")
   }
+
+  
   removefromCart(id: string) {
     return this.http.delete(`http://localhost:3000/Bookbyuser/${id}`)
   }

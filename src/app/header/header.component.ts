@@ -14,7 +14,7 @@ export class HeaderComponent {
   searchbook: undefined | books[];
   userName: string = "";
   adminName: string = "";
-  cart=0;
+  cart = 0;
 
 
   menuType: string = 'default';
@@ -35,7 +35,7 @@ export class HeaderComponent {
   //         let userSignupData = usersighupStore && JSON.parse(usersighupStore);
   //         this.userName = userSignupData.username;
   //         this.menuType = 'user_signup';
-        
+
   //       }
   //       else if (localStorage.getItem('admin_signup')) {
   //         let Admin = localStorage.getItem('admin_signup');
@@ -43,7 +43,7 @@ export class HeaderComponent {
   //         console.warn(userData);
   //         this.adminName = userData.firstName;
   //         this.menuType = 'admin_signup';
-          
+
   //       }
   //       else {
   //         this.menuType = "default";
@@ -51,12 +51,27 @@ export class HeaderComponent {
   //     }
   //   });
   // }
+
+
+  // getItemCountInLocalStorage(): number {
+  //   const localStorageData = localStorage.getItem('bookaddList');
+  //   if (localStorageData) {
+  //     const parsedData = JSON.parse(localStorageData);
+  //     return parsedData.length; // Assuming 'bookaddList' contains an array
+  //   }
+  //   this.books.cartData.subscribe((items)=>{
+  //     this.cart= items.length
+  //   }
+  //   return 0;
+  // }
+
+
   ngOnInit(): void {
     this.router.events.subscribe((val: any) => {
       if (val.url) {
         let userSignupData = JSON.parse(localStorage.getItem('user_signup') || '{}');
         let userData = JSON.parse(localStorage.getItem('admin_signup') || '{}');
-  
+
         if (userSignupData.username) {
           this.userName = userSignupData.username;
           this.menuType = 'user_signup';
@@ -71,13 +86,13 @@ export class HeaderComponent {
     });
   }
 
-  
-  logout(){
+
+  logout() {
     localStorage.clear();
     console.warn(this.userName + " has logged out");
     this.router.navigate([''])
   }
-  
+
 
 
 
@@ -96,7 +111,7 @@ export class HeaderComponent {
         if (result.length > 5) {
           result.length = 5;
         }
-        this.searchbook=result;
+        this.searchbook = result;
         console.warn(result);
       });
     }
@@ -104,12 +119,12 @@ export class HeaderComponent {
   hidesearch() {
     this.searchbook = undefined;
   }
-  submitSearch(val:string){
+  submitSearch(val: string) {
     console.warn(val)
-  this.router.navigate([`search/${val}`]);
+    this.router.navigate([`search/${val}`]);
   }
 
- 
+
 
 }
 

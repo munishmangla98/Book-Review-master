@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
@@ -23,6 +23,7 @@ import { RecomendationComponent } from './recomendation/recomendation.component'
 import { authGuard } from './auth.guard';
 import { adminauthGuard } from './adminauth.guard';
 import { SearchbookComponent } from './searchbook/searchbook.component';
+import { AddbyuserComponent } from './addbyuser/addbyuser.component';
 const routes: Routes = [
   {
     path: '',
@@ -114,6 +115,11 @@ const routes: Routes = [
 {
     path:'search/:queary',
     component:SearchbookComponent,
+},
+{
+    path:'addbyuser',
+    component:AddbyuserComponent,
+    canActivate:[adminauthGuard]
 }
 ];
 

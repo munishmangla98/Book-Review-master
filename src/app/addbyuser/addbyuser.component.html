@@ -15,7 +15,7 @@
         <th>Publishing Date</th>
         <th>Rating</th>
         <th>Review</th>
-        <th>Action</th>
+        <th>Username</th>
       </tr>
     </thead>
     <tbody>
@@ -27,9 +27,10 @@
         <td>{{ book.Dateofpublishing }}</td>
         <td>{{ book.Rating }}</td>
         <td>{{ book.Review }}</td>
-        <button (click)="deletebook(book.id)">Delete</button>
-      <button><a routerLink="/bookupdate/{{book.id}}">update-Book</a></button>
-      <button (click)="toggleForm()">Activate Review</button>
+        <td>{{book.username}}</td>
+        <!-- <button (click)="deletebook(book.id)">Delete</button> -->
+      <!-- <button><a routerLink="/bookupdate/{{book.id}}">update-Book</a></button> -->
+      <!-- <button (click)="toggleForm()">Activate Review</button> -->
       
 
       </tr>

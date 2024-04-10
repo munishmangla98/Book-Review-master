@@ -29,6 +29,7 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { RecomendationComponent } from './recomendation/recomendation.component';
 import { SearchbookComponent } from './searchbook/searchbook.component';
+import { AddbyuserComponent } from './addbyuser/addbyuser.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { SearchbookComponent } from './searchbook/searchbook.component';
     WishlistComponent,
     RecomendationComponent,
     SearchbookComponent,
+    AddbyuserComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@
                     
         <ul class="suggested_result" *ngIf="searchbook">
             <li *ngFor="let item of searchbook">
-                <a>{{item.Bookname}}</a>
+                <a routerLink="/opendetails/{{item.id}}">{{item.Bookname}}</a>
             </li>
         </ul>
     </div>
