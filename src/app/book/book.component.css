@@ -1,80 +1,138 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-container {
+    height: 100vh; /* Set the height to allow for scrolling */
+    overflow-y: auto; /* Add vertical scrollbar */
+    width: 100%;
+    max-width: 1200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 20px 0;
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
-    max-height: calc(5 * (18% + 20px));
-    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
 }
-
-
 
 .card {
-    width: 18%;
-    margin: 10px;
-    border: 1px solid #ccc;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
-    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; flex-direction: column; justify-content: space-between;
 }
 
-.more-books a{
-    align-items: center;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 500px;
-    text-decoration: none;
-    align-items: center; 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card p {
+    margin: 10px 0;
+    padding: 0 15px;
+}
+
+.card button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0px auto;
+    width: 200px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.card a{
+    color: white;
+
+}
+.card button:hover,
+.card a:hover {
+    background-color: #0056b3;
+}
+
+.card button {
+    border-radius: 4px;
+}
+
+.card a {
+    border-radius: 4px;
+}
+
+.more-books {
+    margin: 0px;
+}
+
+.more-books a {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.more-books a:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .more-books {
+        margin: 50px;
+        margin-top: 60px;
+        margin-bottom: 5px;
     }
-    .more-books{
-        margin-left: 112px;
+
+    .card {
+        width: 45%;
     }
-    
-    /* Media query for smaller screens */
-    @media screen and (max-width: 768px) {
-        .more-books {
-            margin: 50px;
-            margin-left: 270px;
-            margin-top: 60px;
-            margin-bottom: 5px;
-        }
-        .card button{
-            margin-left: 1px;
-            width: 50px;
-        }
-        /* .card-container{
-            margin-left: 60px;
-        } */
-        .more-books a {
-            margin: 10px;
-            margin-bottom: 5px;
-        }
-        @media screen and (max-width: 480px) {
-            .more-books {
-                width: 100%; 
-                margin-left: 120px;
-            }
-            .card {
-                width: 40%;
-                margin-right: 20px;
-            }
-            .card-container{
-                margin-left: 47px;
-                width: 100%;
-            }
-        
+}
+
+@media screen and (max-width: 480px) {
+    .more-books {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .card-container {
+        justify-content: center;
     }
 }

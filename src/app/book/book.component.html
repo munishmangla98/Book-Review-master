@@ -6,17 +6,23 @@
         <a routerLink="/recomended">Add books recomendation</a>
     </div>
 
-<div class="card-container" *ngIf="bookList">
-    
-    <div class="card" *ngFor="let item of bookList">
-            <p style="text-align: center; font-weight: bold;">{{item.Bookname}}</p>
-            <p>{{item.BookAuthor}}</p> 
-            <p>Rating</p>
-            <button (click)="addtowishlist(item)">Add to read</button>
-            <br>
-            <br>
-            <button><a style="text-decoration: none;" routerLink="/opendetails/{{item.id}}">More Details</a></button>
+    <div class="scroll-container">
+        <div class="card-container" *ngIf="bookList">
 
+            <div class="card" *ngFor="let item of bookList">
+                <img src="{{item.picture}}" alt="Book Cover">
+                <p
+                    style="text-align: center; font-weight: bold;">{{item.Bookname}}</p>
+                <p>{{item.BookAuthor}}</p>
+                <p>Rating</p>
+                <button (click)="addtowishlist(item)">Add to read</button>
+                <br>
+                <br>
+                <button><a style="text-decoration: none;"
+                        routerLink="/opendetails/{{item.id}}">More
+                        Details</a></button>
+
+            </div>
         </div>
     </div>
 

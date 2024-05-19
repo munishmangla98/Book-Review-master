@@ -14,43 +14,39 @@ export class HeaderComponent {
   searchbook: undefined | books[];
   userName: string = "";
   adminName: string = "";
-  cart = 0;
+  cartdata = 0;
 
 
   menuType: string = 'default';
-  // userLogout: any;
-  // userlogin: any;
-  // isloggedin_user !: boolean  ;
-  // isloogedIn_Admin ! :boolean ;
   constructor(private router: Router, private books: BooksService, private user: UserSignupService) {
 
   }
   // for changing navbar
 
-  // ngOnInit(): void {
-  //   this.router.events.subscribe((val: any) => {
-  //     if (val.url) {
-  //       if (localStorage.getItem('user_signup')) {
-  //         let usersighupStore = localStorage.getItem('user_signup');
-  //         let userSignupData = usersighupStore && JSON.parse(usersighupStore);
-  //         this.userName = userSignupData.username;
-  //         this.menuType = 'user_signup';
+  ngOnInit(): void {
+    this.router.events.subscribe((val: any) => {
+      if (val.url) {
+        if (localStorage.getItem('user_signup')) {
+          const usersighupStore = localStorage.getItem('user_signup');
+          const userSignupData = usersighupStore && JSON.parse(usersighupStore);
+          this.userName = userSignupData.username;
+          this.menuType = 'user_signup';
 
-  //       }
-  //       else if (localStorage.getItem('admin_signup')) {
-  //         let Admin = localStorage.getItem('admin_signup');
-  //         let userData = Admin && JSON.parse(Admin);
-  //         console.warn(userData);
-  //         this.adminName = userData.firstName;
-  //         this.menuType = 'admin_signup';
+        }
+        else if (localStorage.getItem('admin_signup')) {
+          const Admin = localStorage.getItem('admin_signup');
+          const userData = Admin && JSON.parse(Admin);
+          console.warn(userData);
+          this.adminName = userData.username;
+          this.menuType = 'admin_signup';
 
-  //       }
-  //       else {
-  //         this.menuType = "default";
-  //       }
-  //     }
-  //   });
-  // }
+        }
+        else {
+          this.menuType = "default";
+        }
+      }
+    });
+  }
 
 
   // getItemCountInLocalStorage(): number {
@@ -59,32 +55,11 @@ export class HeaderComponent {
   //     const parsedData = JSON.parse(localStorageData);
   //     return parsedData.length; // Assuming 'bookaddList' contains an array
   //   }
-  //   this.books.cartData.subscribe((items)=>{
+  //   this.books.cartdata.subscribe((items)=>{
   //     this.cart= items.length
   //   }
   //   return 0;
   // }
-
-
-  ngOnInit(): void {
-    this.router.events.subscribe((val: any) => {
-      if (val.url) {
-        let userSignupData = JSON.parse(localStorage.getItem('user_signup') || '{}');
-        let userData = JSON.parse(localStorage.getItem('admin_signup') || '{}');
-
-        if (userSignupData.username) {
-          this.userName = userSignupData.username;
-          this.menuType = 'user_signup';
-        } else if (userData.firstName) {
-          console.warn(userData);
-          this.adminName = userData.firstName;
-          this.menuType = 'admin_signup';
-        } else {
-          this.menuType = 'default';
-        }
-      }
-    });
-  }
 
 
   logout() {

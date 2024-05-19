@@ -36,8 +36,8 @@ export class BooksService {
     return this.http.post('http://localhost:3000/review', data)
   }
 
-  getreview(book_id: string) {
-    return this.http.get(`http://localhost:3000/review/${book_id}`)
+  getreview() {
+    return this.http.get<review[]>('http://localhost:3000/review')
   }
   
 
@@ -46,11 +46,12 @@ export class BooksService {
     return this.http.get<books>(`http://localhost:3000/books/${id}`)
   }
   
-  
-  
   updated_book(data: books) {
     return this.http.put<books>(`http://localhost:3000/books/${data.id}`, data);
   }
+
+
+  
   trending_book(data: books) {
     return this.http.get<books[]>("http://localhost:3000/books?_limit=4");
   }

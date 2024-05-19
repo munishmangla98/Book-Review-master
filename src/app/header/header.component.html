@@ -2,7 +2,7 @@
     <div class="heading">
     <p routerLink="/">Read Freak</p>
     </div>
-    <div *ngIf="menuType!=='user_signup'" class="nav-search">
+    <div *ngIf="menuType=='user_signup'" class="nav-search">
         <!-- <div class="nav-search"> -->
         <input #searchInput type="text" (keyup)="search($event)"
             placeholder="Search for Book" (blur)="hidesearch()" />
@@ -26,17 +26,18 @@
             <li><a routerLink="/user_name">Home</a></li>
             <li><a routerLink="/about">About</a></li>
             <li><a routerLink="/books">Book</a></li>
-            <li><a routerLink="/wishlist">wishlist ({{cart}})</a></li>
+            <li><a routerLink="/wishlist">wishlist</a></li>
             <li><a routerLink="/login">login</a></li>
-            <li><a (click)="logout()">Logout</a></li>
+            <!-- <li><a (click)="logout()">Logout</a></li> -->
         </ul>
         <ul *ngSwitchCase="'user_signup'"  class="main-nav">
             <li><a routerLink="/user_name">Home</a></li>
             <li><a routerLink="/about">About</a></li>
             <li><a routerLink="/books">Book</a></li>
-            <li><a routerLink="/wishlist">wish list({{cart}})</a></li>
+            <li><a routerLink="/wishlist">wish list</a></li>
             <li><a>{{userName | titlecase}}</a></li>
             <li><a (click)="logout()">Logout</a></li>
+            <!-- <li><a routerLink="/wishlist">wish list({{cartdata}})</a></li> -->
         </ul>
         <ul *ngSwitchCase="'admin_signup'"  class="main-nav">
             <li><a routerLink="/book-add">add-book</a></li>
@@ -48,6 +49,3 @@
     </div>
 
 </nav>
-
-<!-- <app-guest></app-guest> -->
-<!-- <li><a routerLink="/contactus">Contact Us</a></li> -- -->

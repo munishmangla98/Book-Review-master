@@ -49,7 +49,7 @@ const routes: Routes = [
 {
     path:'opendetails/:id',
     component:BookDetailComponent,
-    canActivate:[authGuard]
+    // canActivate:[authGuard]
 },
 {
     path:'contactus',

@@ -48,7 +48,7 @@ export interface review{
     bookdata: any;
     user_name: string;
     id: string,
-    review: string
+    Review: string
 }
 
 export interface addedbooks {

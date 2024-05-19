@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -38,7 +38,7 @@ body {
     text-decoration: none;
     align-items: center; 
 
-    }
+    } */
     
     
     /* Media query for smaller screens */
@@ -82,3 +82,94 @@ body {
         
     }
 }
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    background-color: #007bff;
+    color: white;
+    margin: 0;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+.card p {
+    margin: 10px 0;
+    padding: 0 15px;
+}
+
+.card button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.card a {
+    color: white;
+}
+
+.card button:hover, .card a:hover {
+    background-color: #45a049;
+}
+
+.card button {
+    border-radius: 4px;
+}
+
+.card a {
+    border-radius: 4px;
+}
+
+/* .message {
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+} */

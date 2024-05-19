@@ -1,7 +1,4 @@
-<!-- <app-header> </app-header> -->
-<!-- Add this section to display the table with Activate/Deactivate buttons -->
 <br>
-<a style="align-items: center; " routerLink="/book-add">add-book</a>
 <a routerLink="/admin">admin</a>
 
 <p style="align-items: center;font-weight: bold;">{{bookmessage}}</p>
@@ -19,7 +16,6 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Use *ngFor to iterate over your book data and populate the table rows -->
       <tr *ngFor="let book of bookList">
         <td><img src="{{book.picture}}"></td>
        <td>{{ book.Bookname }}</td>
@@ -27,21 +23,12 @@
         <td>{{ book.Dateofpublishing }}</td>
         <td>{{ book.Rating }}</td>
         <td>{{ book.Review }}</td>
+        <td>
         <button (click)="deletebook(book.id)">Delete</button>
       <button><a routerLink="/bookupdate/{{book.id}}">update-Book</a></button>
-      <button (click)="toggleForm()">Activate Review</button>
-      
-
-      </tr>
-            <!--<button>Activate</button>
-            <button>Deactivate</button>
-           Use ngIf to conditionally display Activate/Deactivate buttons based on the book's activation state -->
-          <!-- <button *ngIf="!book.active" (click)="activateBook(book)">Activate</button>
-          <button *ngIf="book.active" (click)="deactivateBook(book)">Deactivate</button> 
-          <a routerLink="/bookupdate">update-book</a>   
-
+      <!-- <button (click)="toggleForm()">Activate Review</button> -->
         </td>
-      </tr> -->
+      </tr>
     </tbody>
   </table>
 </div>

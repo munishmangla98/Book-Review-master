@@ -1,6 +1,7 @@
 <!-- <app-header></app-header> -->
 <div class="book-reviews-container">
     <p style="color: green; align-items: center;">{{addbookreviewmessage}}</p>
+    <p style="color: red; align-items: center;">{{ signInMessage }}</p>
     <div class="book-info">
 
         <img src="{{bookdata?.picture}}" alt="Book Cover"
@@ -15,10 +16,13 @@
             <div *ngIf="displayForm">
                 <form #BookReviewaddform="ngForm"
                     (ngSubmit)="addReview(BookReviewaddform.value)">
-                    <label style="font-size: 24px;" for="review">Review:</label>
+                    <label style="font-size: 24px;" for="Review">Review:</label>
                     <input style="height: 35px; margin-left: 3px;" type="text"
-                        id="review" name="review" ngModel>
-                    <button type="submit">Submit</button>
+                        id="Review" name="Review" ngModel>
+                    <!-- <button type="submit" (click)="refreshPage()">Submit</button> -->
+                    <!-- Button is disabled if isUserSignedIn is false -->
+                    <button type="submit" (click)="refreshPage()" [disabled]="!isUserSignedIn">Submit</button>
+
                 </form>
             </div>
 
@@ -31,14 +35,15 @@
                 <tr>
                     <th>Review</th>
                     <th>Username</th>
+                    <th>book</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Use *ngFor to iterate over your book data and populate the table rows -->
-                <!-- <tr *ngFor="let book of bookList"> -->
-                <tr>
-                    <td>book.Review</td>
-                    <td>book.username</td>
+                <tr *ngFor="let review  of reviews">
+                    <td>{{review.Review}}</td>
+                    <td>{{review.user_name}}</td>
+                    <td>{{review.book_id}}</td>
+
                 </tr>
             </tbody>
         </table>

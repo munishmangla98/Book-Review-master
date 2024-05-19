@@ -47,15 +47,16 @@ sharedService: any;
       console.error('No user data found in localStorage');
     }
   }
-
+  refreshPage() {
+    window.location.reload();
+  }
   deletebook(id:string):void{
     console.warn(id)
     this.books.deletebook(id).subscribe((result)=>{
       console.warn(result)
     if(result){
       this.bookmessage="book delete";
-      this.router.navigate(['retrive-book']); // Change '/your-list' to the desired route
-      this.ngOnInit
+      this.refreshPage();
       }
     })    
     setTimeout(() => {
